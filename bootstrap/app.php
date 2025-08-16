@@ -16,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => \App\Http\Middleware\AdminMiddleware::class,
         ]);
-        $middleware->redirectTo(fn (Request $request) => route('hello'));
+        $middleware->redirectTo(fn (Request $request) => route('hello')); //this is for test
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
