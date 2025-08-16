@@ -65,6 +65,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// it's just for testing
 Route::get('hello', function () {
     return 'hello';
 })->name('hello');
