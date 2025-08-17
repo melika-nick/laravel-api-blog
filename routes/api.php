@@ -37,6 +37,7 @@ Route::middleware(['auth:sanctum', 'role:admin'])->prefix('admin')->name('admin.
     Route::prefix('comments')->name('comments.')->group(function () {
         Route::get('/index', [AdminCommentController::class, 'index'])->name('index');
         Route::put('/{comment}/approve', [AdminCommentController::class, 'approve'])->name('approve');
+        Route::put('/{comment}/reject', [AdminCommentController::class, 'reject'])->name('reject');
     });
 });
 
