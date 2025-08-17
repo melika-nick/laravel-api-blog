@@ -70,3 +70,7 @@ It supports both **Admin** and **User** roles with authentication powered by **L
 - **GET** `/api/user/posts` → View posts and approved comments
 - **PUT** `/api/admin/comments/{comment}/approve` → Approve a comment (**Admin**)
 - **PUT** `/api/admin/comments/{comment}/reject` → Reject a comment (**Admin**)  
+
+###### 🧪 Testing the API
+
+- You can test the API using tools like Postman or Insomnia.
