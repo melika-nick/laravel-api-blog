@@ -21,5 +21,11 @@ It supports both **Admin** and **User** roles with authentication powered by **L
 
 1. Clone the repository
 ```bash
-git clone https://github.com/melika-nick/laravel-api-blog
-cd laravel-blog-api
+  git clone https://github.com/melika-nick/laravel-api-blog
+  cd laravel-blog-api
+    ```
+2. Install dependencies
+```bash
+   composer install
+    npm install && npm run build
+```
