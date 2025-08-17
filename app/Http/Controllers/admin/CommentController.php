@@ -24,4 +24,13 @@ class CommentController extends Controller
             'message' => 'Comment approved successfully.'
         ]);
     }
+    public function reject(Comment $comment)
+    {
+        $comment->update([
+            'approved' => false
+        ]);
+        return response()->json([
+            'message' => 'Comment rejected successfully.'
+        ]);
+    }
 }
