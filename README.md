@@ -46,3 +46,27 @@ It supports both **Admin** and **User** roles with authentication powered by **L
 - All protected routes require the following header:
 
   `Authorization: Bearer <token>`
+
+##### 📌 API Endpoints
+
+### 🔐 Auth
+- **POST** `/api/user/register` → Register a new user
+- **POST** `/api/user/login` → Login and get token
+- **POST** `/api/user/logout` → Logout (requires token)
+
+---
+
+### 📝 Posts
+- **GET** `/api/user/posts` → Get all posts (User)
+- **GET** `/api/admin/posts/{post}` → Get a single post (**Admin only**)
+- **GET** `/api/admin/posts/create` → Create a post (**Admin only**)
+- **PUT** `/api/adminposts/{post}` → Update a post (**Admin only**)
+- **DELETE** `/api/admin/posts/{post}` → Delete a post (**Admin only**)
+
+---
+
+### 💬 Comments
+- **POST** `/api/user/posts/{post}/comments` → Add a comment to a post (User)
+- **GET** `/api/user/posts` → View posts and approved comments
+- **PUT** `/api/admin/comments/{comment}/approve` → Approve a comment (**Admin**)
+- **PUT** `/api/admin/comments/{comment}/reject` → Reject a comment (**Admin**)  
