@@ -29,3 +29,7 @@ It supports both **Admin** and **User** roles with authentication powered by **L
    composer install
     npm install && npm run build
 ```
+3. Run migrations & seeders
+```bash
+   php artisan migrate --seed
+```
