@@ -33,3 +33,16 @@ It supports both **Admin** and **User** roles with authentication powered by **L
 ```bash
    php artisan migrate --seed
 ```
+4. Start the server
+```bash
+   php artisan serve
+```
+#### 🔑 Authentication
+
+- Authentication is handled via Laravel Sanctum.
+
+- After login, the API returns a Bearer Token.
+
+- All protected routes require the following header:
+
+  `Authorization: Bearer <token>`
