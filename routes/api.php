@@ -18,6 +18,9 @@ use App\Http\Controllers\User\CommentController as UserCommentController;
 Route::post('/admin/login', [AuthController::class, 'adminLogin'])->name('admin.login');
 Route::post('/admin/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum')->name('admin.logout');
 
+//user register
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+
 // User Auth
 Route::post('/user/login', [AuthController::class, 'userLogin'])->name('user.login');
 Route::post('/user/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum')->name('user.logout');
