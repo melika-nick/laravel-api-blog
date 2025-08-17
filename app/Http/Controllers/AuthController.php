@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -24,10 +25,9 @@ class AuthController extends Controller
         }
 
         $token = $user->createToken('admin-token-' . now())->plainTextToken;
-
         return response()->json([
             'token' => $token,
-            'user' => $user
+            'user' => new UserResource($user)
         ]);
     }
 
@@ -57,7 +57,7 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        $request->user()->currentAccessToken()->delete();
+        $request->user()->Tokens()->delete();
 
         return response()->json(['message' => 'Logged out successfully']);
     }
